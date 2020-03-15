@@ -19,16 +19,11 @@ class App{
 
         if(isFormClicked){
 
-            this.openForm()
-            this.$form.classList.remove('form-open')
-            this.$noteTitle.style.display = 'block'
-            this.$formButton.style.display = 'block'            
+            this.openForm()            
 
         }else{
-
-            this.$form.classList.remove('form-open')
-            this.$noteTitle.style.display = 'none'
-            this.$formButton.style.display = 'none'
+            
+            this.closeForm()
         }
     }
 
@@ -36,6 +31,11 @@ class App{
         this.$form.classList.add('form-open')
         this.$noteTitle.style.display = 'block'
         this.$formButton.style.display = 'block'
+    }
+    closeForm(){
+        this.$form.classList.remove('form-open')
+        this.$noteTitle.style.display = 'none'
+        this.$formButton.style.display = 'none'
     }
 }
 
